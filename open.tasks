@@ -1,0 +1,10 @@
+JavaScript library that takes an RDF file (file.ttl) and array of access keys as input, and outputs a privacy-preserving summary (file.ttl.summary):    
+    RDF:
+        ☐ Parse `file.ttl` with rdf-parse: https://www.npmjs.com/package/rdf-parse
+    Summary:
+        ☐ bloem
+        ☐ bloom-filter
+        ☐ golombcodedsets
+        ☐ base64-arraybuffer
+        ☐ murmurhash
+    

@@ -1,0 +1,15 @@
+{
+    "files.exclude": {
+        "**/*.js": {
+            "when": "$(basename).ts"
+        },
+        "**/*.d.ts": {
+            "when": "$(basename).ts"
+        },
+        "**/*.js.map": true
+    },
+    "eslint.alwaysShowStatus": true,
+    "eslint.format.enable": true,
+    "eslint.run": "onSave",
+    "python.pythonPath": "C:\\Users\\z00372up\\Miniconda3\\envs\\ds\\python.exe"
+}

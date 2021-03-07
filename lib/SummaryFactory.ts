@@ -37,24 +37,19 @@ export class SummaryFactory {
     }
     const quads: RDF.Quad[] = [];
 
-    try {
-      rdfParser.parse(textStream, parseOptions)
-        .on('data', quad => {
-          console.log(quad);
-          quads.push(quad);
-        })
-        .on('error', error => {
-          console.log(`47:${JSON.stringify(error)}`);
-          return callback(error);
-        })
-        .on('end', () => {
-          console.log('All done!');
-          callback(quads);
-        });
-    } catch (error: unknown) {
-      console.log(`55:${JSON.stringify(error)}`);
-      return callback(error);
-    }
+    rdfParser.parse(textStream, parseOptions)
+      .on('data', quad => {
+        console.log(quad);
+        quads.push(quad);
+      })
+      .on('error', error => {
+        console.log(`47:${JSON.stringify(error)}`);
+        return callback(error);
+      })
+      .on('end', () => {
+        console.log('All done!');
+        callback(quads);
+      });
   }
 }
 // Export interface ISummaryFactoryOptions {

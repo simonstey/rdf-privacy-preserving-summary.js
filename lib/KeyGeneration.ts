@@ -14,8 +14,8 @@ export class KeyGeneration {
 
   public constructor(options: IKeyGeneratorOptions) {
     this.algorithm = options.algorithm || 'aes256';
-    this.inputEncoding = options.inputEncoding || <crypto.Encoding> 'utf8';
-    this.outputEncoding = options.outputEncoding || <crypto.BinaryToTextEncoding> 'hex';
+    this.inputEncoding = options.inputEncoding || <crypto.Encoding>'utf8';
+    this.outputEncoding = options.outputEncoding || <crypto.BinaryToTextEncoding>'hex';
     // AES blocksize
     this.ivlength = options.ivlength || 16;
     this.encryptionKey = options.encryptionKey;
